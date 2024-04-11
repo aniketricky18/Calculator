@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.calculator, .percentage-calculator {
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    background-color: #f9f9f9;
+}
+
+.keypad, .percentage-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ddd;
+}
+
+button:active {
+    background-color: #bbb;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 1.2em;
+    box-sizing: border-box;
+}
