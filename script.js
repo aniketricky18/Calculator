@@ -49,3 +49,14 @@ function calculatePercentage(operation) {
         resultDisplay.value = 'Invalid Input';
     }
 }
+function calculate() {
+    try {
+        let result = eval(display.value);
+        display.value = result;
+        
+        // Send the result to the numberInput of the percentage calculator
+        numberInput.value = result;
+    } catch (error) {
+        display.value = 'Error';
+    }
+}
