@@ -43,3 +43,22 @@ input[type="text"], input[type="number"] {
     font-size: 1.2em;
     box-sizing: border-box;
 }
+.rotate-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 16px;
+    z-index: 1000; /* Ensure the message appears above other content */
+}
+
+@media only screen and (min-width: 600px) {
+    /* Hide the rotate message on screens wider than 600px (landscape orientation) */
+    .rotate-message {
+        display: none;
+    }
+}
