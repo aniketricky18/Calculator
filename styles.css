@@ -5,6 +5,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    background-color: #f5f5f5; /* Set a light background color */
 }
 
 .calculator, .percentage-calculator {
@@ -13,7 +14,10 @@ body {
     border-radius: 8px;
     padding: 20px;
     margin: 20px;
-    background-color: #f9f9f9;
+    background-color: #fff; /* White background for calculators */
+    width: 80%; /* Set a maximum width for better responsiveness */
+    max-width: 400px; /* Adjust max-width based on your preference */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
 .keypad, .percentage-buttons {
@@ -24,7 +28,7 @@ body {
 }
 
 button {
-    padding: 10px;
+    padding: 15px;
     font-size: 1.2em;
     border: none;
     border-radius: 5px;
@@ -38,8 +42,33 @@ button:active {
 
 input[type="text"], input[type="number"] {
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     margin-top: 10px;
     font-size: 1.2em;
     box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none; /* Remove outline on focus */
+}
+
+.percentage-calculator {
+    margin-top: 40px; /* Increase margin for better separation */
+}
+
+@media only screen and (max-width: 600px) {
+    /* Adjustments for smaller screens (e.g., mobile devices) */
+    .calculator, .percentage-calculator {
+        width: 90%; /* Adjust width for smaller screens */
+        padding: 15px;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 1em;
+    }
+
+    input[type="text"], input[type="number"] {
+        padding: 12px;
+        font-size: 1em;
+    }
 }
